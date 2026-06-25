@@ -17,6 +17,11 @@
     home.packages = with pkgs; [
         brave
         fastfetch
+        hollywood
+        cmatrix
+        pipes
+        asciiquarium
+        btop
     ];
 
     programs.home-manager.enable = true;
