@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
     home.username = "nimrod";
@@ -6,6 +6,8 @@
     home.stateVersion = "25.05";
 
     imports = [
+        inputs.plasma-manager.homeModules.plasma-manager
+        ./home/plasma.nix
         ./home/vscode.nix
         ./home/kitty.nix
         ./home/zsh.nix

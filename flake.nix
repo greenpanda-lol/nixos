@@ -8,9 +8,14 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        plasma-manager = {
+            url = "github:nix-community/plasma-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
         nixosConfigurations = {
             nixos = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
@@ -24,6 +29,10 @@
                         home-manager.useUserPackages = true;
 
                         home-manager.users.nimrod = import ./home.nix;
+
+                        home-manager.extraSpecialArgs = {
+                            inherit inputs;
+                        };
                     }
                 ];
             };
