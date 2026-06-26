@@ -16,14 +16,17 @@
 
     home.packages = with pkgs; [
         brave
-        fastfetch
         hollywood
         cmatrix
         pipes
         asciiquarium
         btop
+        jetbrains-mono
     ];
 
     programs.home-manager.enable = true;
     programs.starship.enable = true;
+    programs.fastfetch.enable = true;
+
+    xdg.configFile."fastfetch/config.jsonc".source = ./theme/fastfetch.jsonc;
 }
