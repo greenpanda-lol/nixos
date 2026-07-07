@@ -22,6 +22,10 @@
         asciiquarium
         btop
         jetbrains-mono
+        niri
+        fuzzel
+        swaybg
+        wl-clipboard
     ];
 
     programs.home-manager.enable = true;

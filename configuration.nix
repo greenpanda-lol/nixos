@@ -143,4 +143,13 @@
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.dragAndDrop = true;
   virtualisation.virtualbox.guest.clipboard = true;
+
+  programs.niri.enable = true;
+
+  programs.xwayland.enable = true;
+  services.dbus.enable = true;
+  security.polkit.enable = true;
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }
