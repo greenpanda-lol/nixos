@@ -45,5 +45,11 @@
                 ];
             }
         ];
+
+        configFile.kwinrc = {
+            Plugins = {
+                glassEnabled = true;
+            };
+        };
     };
 }

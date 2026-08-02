@@ -13,6 +13,13 @@
             url = "github:nix-community/plasma-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        kwin-effect-glass = {
+            url = "github:4v3ngR/kwin-effects-glass";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        gruvbox-wallpapers.url = "github:AngelJumbo/gruvbox-wallpapers";
     };
 
     outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {

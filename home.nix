@@ -26,6 +26,9 @@
         fuzzel
         swaybg
         wl-clipboard
+        inputs.kwin-effect-glass.packages.${pkgs.system}.default
+        python314
+        uv
     ];
 
     programs.home-manager.enable = true;
@@ -33,4 +36,11 @@
     programs.fastfetch.enable = true;
 
     xdg.configFile."fastfetch/config.jsonc".source = ./theme/fastfetch.jsonc;
+
+    home.file = {
+        "/home/nimrod/Wallpapers" = {
+            source = inputs.gruvbox-wallpapers.packages."${pkgs.stdenv.hostPlatform.system}".default;
+            recursive = true;
+        };
+    };
 }
